@@ -6,7 +6,10 @@ import styled from 'styled-components';
 
 import { Link } from 'react-scroll';
 
-import Logo from './Logo';
+import themeList from '../data/themeList';
+
+import Logo from '../Logo';
+import ThemeSwitcher from './ThemeSwitcher';
  
 const HeaderStyles = styled.header`
   position: fixed;

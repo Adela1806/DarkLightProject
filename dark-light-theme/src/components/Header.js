@@ -1,10 +1,13 @@
  
 import React, { useEffect, useRef, useState } from 'react';
+
 import { FiMenu, FiX } from 'react-icons/fi';
 import styled from 'styled-components';
+
 import { Link } from 'react-scroll';
 
-
+import Logo from './Logo';
+ 
 const HeaderStyles = styled.header`
   position: fixed;
   top: 0;

@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { ThemeProvider } from 'styled-components';
+
+import ThemeContext from './contexts/ThemeContext';
+
+import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
+
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
-      <h3>Project name: Dark light theme</h3>
-      <p>by Nga Vo</p>
+      <ThemeProvider theme={{ theme }}>
+        <GlobalStyles />
+        <LandingPage />
+      </ThemeProvider>
     </>
   );
 }

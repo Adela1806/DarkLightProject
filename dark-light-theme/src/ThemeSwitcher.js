@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 
 import { FiSun, FiMoon } from 'react-icons/fi';
-import ThemeContext from '../contexts/ThemeContext';
-import themeList from '../data/themeList';
-
 import styled from 'styled-components';
+import ThemeContext from './contexts/ThemeContext';
+import themeList from './data/themeList';
 
 const ThemeSwitcherStyles = styled.div`
   label {
@@ -29,11 +28,13 @@ const ThemeSwitcherStyles = styled.div`
       align-items: center;
       justify-content: center;
     }
+
     svg {
       width: 75%;
       color: var(--white);
     }
   }
+
   input {
     width: 0;
     height: 0;
@@ -76,7 +77,7 @@ export default function ThemeSwitcher() {
         <div className="icon">
           <FiSun />
         </div>
-        
+
         <div className="icon">
           <FiMoon />
         </div>

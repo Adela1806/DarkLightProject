@@ -2,7 +2,7 @@ import { createContext, useReducer } from 'react';
 
 import themeList from '../data/themeList';
 
-const ThemeContext = createContext();
+const ThemeContext = createContext(themeList);
 
 const lightTheme = themeList.light;
 
@@ -62,5 +62,4 @@ const ThemeContextProvider = ({ children }) => {
 };
 
 export default ThemeContext;
-
 export { ThemeContextProvider };

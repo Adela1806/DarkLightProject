@@ -1,4 +1,3 @@
- 
 import React, { useEffect, useRef, useState } from 'react';
 
 import { FiMenu, FiX } from 'react-icons/fi';
@@ -9,8 +8,8 @@ import { Link } from 'react-scroll';
 import themeList from '../data/themeList';
 
 import Logo from '../Logo';
-import ThemeSwitcher from './ThemeSwitcher';
- 
+import ThemeSwitcher from '../ThemeSwitcher';
+
 const HeaderStyles = styled.header`
   position: fixed;
   top: 0;
@@ -20,15 +19,18 @@ const HeaderStyles = styled.header`
   background-color: ${({ theme: { theme } }) =>
     theme === themeList.light ? 'var(--lightBlue_1)' : 'var(--darkBlue_3)'};
   border-bottom: 1px solid var(--mediumSlateBlue);
+
   .navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
   }
+
   nav ul li {
     display: inline-block;
     margin: 0 0.5rem;
+
     a {
       display: inline-block;
       font-size: 1.6rem;
@@ -37,23 +39,28 @@ const HeaderStyles = styled.header`
       color: ${({ theme: { theme } }) =>
         theme === themeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
     }
+
     &:hover {
       a {
         text-decoration: underline;
       }
     }
+
     a.active {
       text-decoration: underline;
     }
   }
+
   .navMenu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
+
   .themeSwitcher {
     z-index: -1;
   }
+
   .menuIcon,
   .closeIcon {
     width: 30px;
@@ -70,6 +77,7 @@ const HeaderStyles = styled.header`
       border-radius: 4px;
     }
   }
+
   .closeIcon {
     position: absolute;
     right: 10px;
@@ -81,6 +89,7 @@ const HeaderStyles = styled.header`
       }
     }
   }
+
   .navOverlay {
     position: absolute;
     left: 0;
@@ -90,6 +99,7 @@ const HeaderStyles = styled.header`
     background: var(--darkBlue_3);
     opacity: 0.4;
   }
+
   @media only screen and (max-width: 768px) {
     nav {
       display: flex;
@@ -231,5 +241,3 @@ export default function Header() {
     </HeaderStyles>
   );
 }
-© 2021 GitHub, Inc.
-Terms

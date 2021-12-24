@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import themeList from '../data/themeList';
-
 // Typography
 import '@fontsource/poppins';
 import '@fontsource/poppins/500.css';

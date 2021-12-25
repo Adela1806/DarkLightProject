@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 
 import themeList from '../data/themeList';
 
-import Logo from '../Logo';
+import Logo from './Logo';
 import ThemeSwitcher from '../ThemeSwitcher';
 
 const HeaderStyles = styled.header`
